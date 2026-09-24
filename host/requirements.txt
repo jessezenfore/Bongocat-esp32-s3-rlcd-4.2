@@ -1,0 +1,20 @@
+# Host-side dependencies for the bongo cat PC side.
+pyserial>=3.5
+psutil>=5.9
+
+# Required by the graphical application (host/gui.py) and for message banners.
+Pillow>=9.0
+pystray>=0.19
+
+# Optional: forward Windows toast notifications to the board.
+# Without it everything else still works; the GUI just reports that
+# notification forwarding is unavailable.
+winsdk>=1.0.0b10
+
+# Optional: cross-platform keyboard sensing.  On Windows the default "win32"
+# sensor needs nothing extra, so pynput is only useful on Linux/macOS or if you
+# prefer the event-based listener.
+# pynput>=1.7
+
+# Build-time only, for `python host/build_exe.py`:
+# pyinstaller>=6.0
